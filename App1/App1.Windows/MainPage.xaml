@@ -6,8 +6,30 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
+    <Page.BottomAppBar>
+        <CommandBar>
+            <AppBarButton Icon="Add" Label="Report leaking tap"/>
+        </CommandBar>
+    </Page.BottomAppBar>
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF007DA8" Offset="0"/>
+                <GradientStop Color="#FF032537" Offset="0.85"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="120"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Column="1" HorizontalAlignment="Left" TextWrapping="Wrap" Text="RHOK: Report dripping taps" VerticalAlignment="Bottom" Style="{StaticResource HeaderTextBlockStyle}"/>
+        </Grid>
 
     </Grid>
 </Page>
